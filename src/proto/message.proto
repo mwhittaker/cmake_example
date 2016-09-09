@@ -1,0 +1,4 @@
+message Pair {
+    optional int64 x = 1;
+    optional int64 y = 2;
+}
