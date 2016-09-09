@@ -1,7 +1,14 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.9)
-PROJECT(TEST)
 
-SET(cpp_flags "-std=c++11 -Wall -Wextra -Werror -lprotobuf")
+PROJECT(Example CXX)
+SET(EXAMPLE_VERSION_MAJOR 0)
+SET(EXAMPLE_VERSION_MINOR 1)
+SET(EXAMPLE_VERSION_PATCH 0)
+
+INCLUDE(logging.cmake)
+PRINT_VARIABLES()
+
+SET(cpp_flags "-stdlib=libc++ -std=c++11 -Wall -Wextra -Werror")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${cpp_flags}")
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} .)
